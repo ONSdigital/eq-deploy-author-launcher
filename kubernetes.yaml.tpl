@@ -31,11 +31,11 @@ spec:
       containers:
       - name: eq-questionnaire-launcher
         image: eu.gcr.io/GOOGLE_CLOUD_PROJECT/eq-questionnaire-launcher:COMMIT_SHA
-        ports:
-        - containerPort: 8000
         envFrom:
         - secretRef:
-          name: launcher-secrets
+            name: launcher-secrets
+        ports:
+        - containerPort: 8000
 
 ---
 kind: Service
